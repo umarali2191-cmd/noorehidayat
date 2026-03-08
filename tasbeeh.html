@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tasbeeh Counter</title>
+
+<script>
+
+let count=0;
+
+function add(){
+count++;
+document.getElementById("number").innerText=count;
+}
+
+function reset(){
+count=0;
+document.getElementById("number").innerText=count;
+}
+
+</script>
+
+</head>
+
+<body style="text-align:center">
+
+<h1>Tasbeeh Counter</h1>
+
+<h2 id="number">0</h2>
+
+<button onclick="add()">Count</button>
+
+<br><br>
+
+<button onclick="reset()">Reset</button>
+
+<br><br>
+
+<a href="index.html"><button>Back</button></a>
+
+</body>
+</html>
