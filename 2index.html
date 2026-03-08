@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Noor e Hidayat</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#e8f5e9;
+text-align:center;
+}
+
+header{
+background:green;
+color:white;
+padding:20px;
+font-size:30px;
+}
+
+.menu button{
+padding:15px;
+margin:10px;
+font-size:18px;
+background:darkgreen;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.section{
+display:none;
+padding:20px;
+}
+
+</style>
+
+<script>
+
+function showPage(page){
+
+document.getElementById("home").style.display="none";
+document.getElementById("quran").style.display="none";
+document.getElementById("hadees").style.display="none";
+document.getElementById("dua").style.display="none";
+document.getElementById("tasbeeh").style.display="none";
+
+document.getElementById(page).style.display="block";
+
+}
+
+let count=0;
+
+function addTasbeeh(){
+count++;
+document.getElementById("counter").innerText=count;
+}
+
+function resetTasbeeh(){
+count=0;
+document.getElementById("counter").innerText=count;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>Noor e Hidayat</header>
+
+<div class="menu">
+
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('quran')">Quran</button>
+<button onclick="showPage('hadees')">Hadees</button>
+<button onclick="showPage('dua')">Dua</button>
+<button onclick="showPage('tasbeeh')">Tasbeeh</button>
+
+</div>
+
+<div id="home" class="section" style="display:block">
+
+<h2>Welcome</h2>
+
+<p>Islamic Knowledge Website</p>
+
+</div>
+
+<div id="quran" class="section">
+
+<h2>Quran Pak</h2>
+
+<p>Quran parhnay ke liye neeche click karein</p>
+
+<a href="https://quran.com" target="_blank">
+<button>Open Quran</button>
+</a>
+
+</div>
+
+<div id="hadees" class="section">
+
+<h2>Hadees</h2>
+
+<p>Ahadees parhnay ke liye click karein</p>
+
+<a href="https://sunnah.com" target="_blank">
+<button>Open Hadees</button>
+</a>
+
+</div>
+
+<div id="dua" class="section">
+
+<h2>Dua</h2>
+
+<p>
+Rabbana atina fid dunya hasanah wa fil akhirati hasanah wa qina azaban nar
+</p>
+
+</div>
+
+<div id="tasbeeh" class="section">
+
+<h2>Tasbeeh Counter</h2>
+
+<h1 id="counter">0</h1>
+
+<button onclick="addTasbeeh()">Count</button>
+
+<br><br>
+
+<button onclick="resetTasbeeh()">Reset</button>
+
+</div>
+
+<br><br>
+
+<p>Follow us on Facebook</p>
+
+<a href="https://facebook.com" target="_blank">
+<button>Facebook Page</button>
+</a>
+
+</body>
+</html>
